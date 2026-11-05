@@ -1,0 +1,48 @@
+INSTALLING ON HOSTINGER
+=======================
+
+You need a Business Web Hosting or Cloud plan. These are the plans that run Node.js apps.
+Do not unzip this file into public_html with File Manager. The app would not start,
+because Node.js apps must be created from the Hostinger dashboard.
+
+1. CREATE THE DATABASE
+   hPanel > Databases > Management. Create a MySQL database and user, and note the
+   database name, username and password.
+
+2. UPLOAD THIS ZIP
+   Hostinger dashboard > Websites > Create site > Web App > Upload your website files.
+   Choose this ZIP file.
+
+3. CHECK THE BUILD SETTINGS, THEN DEPLOY
+   Framework:    Express
+   Node version: 24 (22 also works. Version 20 does not.)
+   Entry file:   server.js
+   Build script: leave empty
+   You do not need to add any environment variables. The wizard saves these settings.
+   If you prefer to enter them yourself, do not add PORT, because Hostinger sets it.
+   With DB_NAME and DB_USER set, the wizard is skipped: open /signin to create the
+   admin account using your SETUP_KEY value.
+
+4. OPEN YOUR WEBSITE
+   The installation wizard appears at your domain.
+
+5. GET THE INSTALL KEY
+   The wizard shows the location of a file called INSTALL_KEY.txt. Open it in
+   File Manager and copy the key into the wizard. This stops strangers from
+   installing your site before you do.
+
+6. FOLLOW THE WIZARD
+   Enter the database details, school name and admin account. When it finishes,
+   save the private admin address it shows you.
+
+AFTER INSTALLING
+- Set up email: admin panel > Email > SMTP settings.
+- Add your logo, contact details and content: admin panel > School Identity.
+- Settings and uploads are kept in the "school-cms-data" folder beside public_html.
+  Include that folder in your backups, and keep it when you upload a new version.
+
+IF SOMETHING GOES WRONG
+- Site does not load: check the deployment log in the dashboard, and restart the app there.
+- Wrong database details: the wizard tells you what failed, and you can correct them.
+- Images are not optimised: the Media Library shows a warning if the image module could
+  not run on this server. Uploads still work.

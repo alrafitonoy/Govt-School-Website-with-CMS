@@ -1,0 +1,41 @@
+{
+  "name": "aurora-school-cms",
+  "version": "1.0.8",
+  "private": true,
+  "description": "Lightweight modular school website and CMS (MySQL, Express, React, Node).",
+  "type": "module",
+  "main": "server.js",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "vite build",
+    "start": "node server.js",
+    "db:local": "node scripts/local-db.mjs",
+    "seed:demo": "node scripts/seed-demo.mjs",
+    "test": "node --test \"server/test/*.test.js\"",
+    "package": "node scripts/package-zip.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/noto-sans-bengali": "^5.2.5",
+    "@vitejs/plugin-react": "^4.7.0",
+    "compression": "^1.8.1",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.1",
+    "helmet": "^8.1.0",
+    "lucide-react": "^0.525.0",
+    "multer": "^2.0.2",
+    "mysql2": "^3.14.3",
+    "nodemailer": "^10.3.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.18.5",
+    "sanitize-html": "^2.18.1",
+    "vite": "^6.3.5"
+  },
+  "optionalDependencies": {
+    "sharp": "^0.35.5"
+  }
+}
